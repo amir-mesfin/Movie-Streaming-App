@@ -4,10 +4,10 @@ import Home from './page/Home/home'
 function App() {
 
   return (
-    <o className="App">
+    <>
     <Home />
     {/* <Footer/> */}
-    </o>
+    </>
   )
 }
 

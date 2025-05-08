@@ -1,11 +1,7 @@
 #root {
   /* text-align: center; */
 }
-*{
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
+
 .app{
   backGround-color:#111;
 }
