@@ -1,17 +1,15 @@
 import React from 'react'
-import style from './rowList.module.css'
+// import style from './rowList.module.css'
 import Row from '../row/Row'
+import requests  from '../../../utils/requests'
 function RowList() {
   return (
-    <div>
-      <Row />
-      <Row />
-      <Row />
-      <Row />
-      <Row />
-      <Row />
-      <Row />
-    </div>
+    <>
+    <Row 
+          title="MLA Originals"
+          fetchUrl={requests.fetchNetflixOriginals}
+    />
+    </>
   )
 }
 
