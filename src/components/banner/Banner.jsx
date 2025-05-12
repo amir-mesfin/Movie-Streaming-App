@@ -9,7 +9,7 @@ function Banner() {
     async function fetchData(){
       try{
         const response = await axios.get(requests.fetchNetflixOriginals);
-        console.log(response)
+        // console.log(response)
         setMovie(
           response.data.results[
             Math.floor(Math.random() * response.data.results.length - 1)
