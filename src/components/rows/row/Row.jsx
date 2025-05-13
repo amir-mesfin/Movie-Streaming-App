@@ -31,14 +31,17 @@ function Row({title, fetchUrl, isLargeRow}) {
       // setNoTrailer(false); 
       if (trailerUrl) {
           setTrailerUrl('');
-          setIsModalOpen(false); 
+        //   setIsModalOpen(false); 
       } else {
+        
           movieTrailer(movie?.title || movie?.name || movie?.original_name)
               .then((url) => {
-                // console.log(url);
+                console.log(url);
                   if (url) {
                       const urlParams = new URLSearchParams(new URL(url).search);
+                      console.log(urlParams);
                       const videoId = urlParams.get('v');
+                      console.log(videoId);
                       setTrailerUrl(videoId);
                       setIsModalOpen(true); 
                   } else {
@@ -46,7 +49,7 @@ function Row({title, fetchUrl, isLargeRow}) {
                   }
               })
               .catch(() => {
-                  setNoTrailer(true); 
+                //   setNoTrailer(true); 
               });
       }
   };
