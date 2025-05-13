@@ -31,6 +31,7 @@ function Row({title, fetchUrl, isLargeRow}) {
   const handleClick = (movie) => {
       setNoTrailer(false); 
       if (trailerUrl) {
+        // stop playing the video
           setTrailerUrl('');
           setIsModalOpen(false); 
       } else {
@@ -50,7 +51,7 @@ function Row({title, fetchUrl, isLargeRow}) {
                   }
               })
               .catch(() => {
-                //   setNoTrailer(true); 
+                  setNoTrailer(true); 
               });
       }
   };
