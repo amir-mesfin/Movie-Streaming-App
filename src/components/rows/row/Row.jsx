@@ -8,8 +8,9 @@ import YouTube from 'react-youtube';
 function Row({title, fetchUrl, isLargeRow}) {
   const [movies, setMovie] = useState([]);
   const [trailerUrl, setTrailerUrl] = useState("");
-  // const [isModalOpen, setIsModalOpen] = useState(false);
-  // const [noTrailer, setNoTrailer] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [noTrailer, setNoTrailer] = useState(false);
+
   const base_url = "https://image.tmdb.org/t/p/original";
                  
   useEffect(() => {
@@ -28,20 +29,20 @@ function Row({title, fetchUrl, isLargeRow}) {
 
   // movies trailer function 
   const handleClick = (movie) => {
-      // setNoTrailer(false); 
+      setNoTrailer(false); 
       if (trailerUrl) {
           setTrailerUrl('');
-        //   setIsModalOpen(false); 
+          setIsModalOpen(false); 
       } else {
         
           movieTrailer(movie?.title || movie?.name || movie?.original_name)
               .then((url) => {
-                console.log(url);
+                // console.log(url);
                   if (url) {
                       const urlParams = new URLSearchParams(new URL(url).search);
-                      console.log(urlParams);
+                    //   console.log(urlParams);
                       const videoId = urlParams.get('v');
-                      console.log(videoId);
+                    //   console.log(videoId);
                       setTrailerUrl(videoId);
                       setIsModalOpen(true); 
                   } else {
@@ -78,10 +79,10 @@ function Row({title, fetchUrl, isLargeRow}) {
           </div>
 
       
-          <div style={{ padding: '40px'}}>
+          {/* <div style={{ padding: '40px'}}>
               {trailerUrl && <YouTube videoId={trailerUrl} opts={opts} />}
-          </div>
-          {/* {isModalOpen && (
+          </div> */}
+          {isModalOpen && (
               <div className="modal">
                   <div className="modal__content">
                       <span className="modal__close" onClick={() => setIsModalOpen(false)}>
@@ -101,7 +102,7 @@ function Row({title, fetchUrl, isLargeRow}) {
                       <p>No trailer available for this movie.</p>
                   </div>
               </div>
-          )} */}
+          )}
       </div>
   );
 };
