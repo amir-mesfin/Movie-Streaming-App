@@ -1,53 +1,127 @@
-.header-outer-container{
-  position:static;
-  top:0;
-  display:flex;
+.header-outer-container {
+  position: fixed;
+  top: 0;
+  display: flex;
   justify-content: center;
   align-items: center;
-  /* background-color: rgba(148,132,132); */
-  background-color: transparent;
-  height:10vh;
-  color:white;
-  transition:all 0.5s;
-  transition-timing-function:ease-in;
-  z-index:1;
-  /* background-color: red; */
-  background-color: rgb(20,20,20);
+  background-color: rgb(20, 20, 20);
+  height: 10vh;
+  color: white;
+  transition: all 0.5s ease-in;
+  z-index: 10;
+  width: 100%;
+}
 
+/* Optional: Use this dynamically for scroll */
+.nav-black {
+  background-color: rgb(20, 20, 20);
 }
-nav-black{
-  background-color: rgb(20,20,20);
-  
-}
-.header-container{
-  width:90%;
-  display:flex;
+
+.header-container {
+  width: 90%;
+  display: flex;
   justify-content: space-between;
   align-items: center;
-  /* background-color: yellow; */
   cursor: pointer;
 }
 
-.header-left ul{ 
-  width: 140%;
+/* Logo + Navigation */
+.header-left ul {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 20px;
+  padding: 0;
+  margin: 0;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 18px;
+  color: #e50914;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.nav-list li {
+  font-size: 14px;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.nav-list li:hover {
+  color: #bbb;
+}
+
+/* Right icons */
+.header-right ul {
   display: flex;
   justify-content: space-between;
   align-items: center;
   list-style: none;
-  /* margin: 0;
-  padding: 0;
-  font-size: 1.2rem;
-  font-weight: 600;
-  color: white;
-  text-decoration: none;
-  transition: all 0.5s;
-  transition-timing-function: ease-in; */
+  gap: 14px;
 }
 
-.header-right ul{
-  display:flex;
-  justify-content:space-between;
-  align-items: center;
-  list-style: none;
-  gap:14px;
+.header-right li {
+  position: relative;
+  cursor: pointer;
+}
+
+/* Dropdown menu */
+.profile {
+  position: relative;
+}
+
+.dropdown {
+  position: absolute;
+  top: 40px;
+  right: 0;
+  background-color: #222;
+  padding: 10px;
+  border-radius: 5px;
+  width: 130px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 1000;
+}
+
+.dropdown a {
+  text-decoration: none;
+  color: white;
+  font-size: 13px;
+}
+
+.dropdown a:hover {
+  color: #ccc;
+}
+
+/* Hamburger toggle */
+.hamburger {
+  display: none;
+  font-size: 22px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .header-left ul {
+    display: none;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    background-color: rgb(20, 20, 20);
+    flex-direction: column;
+    padding: 15px 20px;
+  }
+
+  .mobile-show {
+    display: flex !important;
+  }
+
+  .hamburger {
+    display: block;
+  }
 }

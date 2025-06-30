@@ -1,14 +1,37 @@
-/* Base Footer Styles */
 .footer {
+  position: relative;
   background-color: #111;
   color: gray;
   display: flex;
   justify-content: center;
+  overflow: hidden;
+}
+
+.stripBackground {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: repeating-linear-gradient(
+    45deg,
+    #1c1c1c,
+    #1c1c1c 10px,
+    #111 10px,
+    #111 20px
+  );
+  opacity: 0.3;
+  z-index: 0;
 }
 
 .footer__container {
   width: 60%;
   margin: 48px 0;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .footer__icons {
@@ -18,93 +41,106 @@
   color: white;
 }
 
+.icon {
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+.icon:hover {
+  transform: scale(1.2);
+  color: #e50914;
+}
+
 .footer__nav {
   display: flex;
   justify-content: space-between;
-  margin: 5px 0;
+  margin: 20px 0;
+  width: 100%;
 }
 
 .footer__nav ul {
   list-style: none;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
-  height: 7rem;
+  gap: 12px;
+  font-size: 14px;
 }
 
 .footer__nav ul li {
   cursor: pointer;
+  transition: color 0.3s;
+}
+.footer__nav ul li:hover {
+  color: #fff;
 }
 
 .footer__serviceCode {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: #fff 1px solid;
-  width: 10vw;
-  margin: 10px 0;
+  display: inline-block;
+  margin: 20px 0;
+  padding: 6px 12px;
+  border: 1px solid #fff;
+  border-radius: 4px;
   cursor: pointer;
+  font-size: 13px;
+  transition: background 0.3s, transform 0.3s;
+}
+.footer__serviceCode:hover {
+  background: #e50914;
+  color: #fff;
+  transform: scale(1.05);
 }
 
 .footer__copyWrite {
   font-size: 12px;
-  margin-bottom: 10px;
+  color: #888;
+  text-align: center;
 }
 
-/* Responsive Styles */
-
-/* For tablets and smaller screens */
+/* Tablet */
 @media (max-width: 768px) {
   .footer__container {
-    width: 80%;
+    width: 85%;
   }
 
   .footer__nav {
     flex-direction: column;
     align-items: center;
     text-align: center;
+    gap: 20px;
   }
 
   .footer__nav ul {
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: center;
-    gap: 20px;
-    height: auto;
   }
 
   .footer__serviceCode {
-    width: 25vw;
-  }
-
-  .footer__icons {
-    justify-content: center;
-    gap: 15px;
+    width: auto;
+    font-size: 12px;
   }
 }
 
-/* For mobile screens */
+/* Mobile */
 @media (max-width: 480px) {
   .footer__container {
-    width: 90%;
+    width: 95%;
   }
 
   .footer__nav ul {
     flex-direction: column;
-    justify-content: flex-start;
     gap: 10px;
   }
 
   .footer__serviceCode {
-    width: 50vw;
-    font-size: 10px;
+    font-size: 11px;
+    padding: 4px 10px;
   }
 
   .footer__copyWrite {
     font-size: 10px;
-    text-align: center;
   }
 
-  .footer__icons {
-    gap: 10px;
+  .icon {
+    font-size: 20px;
   }
 }
