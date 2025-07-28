@@ -33,7 +33,7 @@
 ---
 
 ## 🚀 Quick Start
-```bash
+
 # Clone the repository
 git clone https://github.com/amir-mesfin/Movie-Streaming-App.git
 cd Movie-Streaming-App
