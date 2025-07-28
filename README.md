@@ -46,7 +46,7 @@ echo "VITE_TMDB_API_KEY=your_api_key_here" > .env
 
 # Start development server
 npm run dev
-
+```bash
 📂 Project Structure
 MovieFlix-Hub/
       ├── public/          # Static assets
@@ -55,12 +55,11 @@ MovieFlix-Hub/
       │   ├── components/  # Reusable components
       │   ├── hooks/       # Custom hooks
       │   ├── pages/       # Screen components
-      │   ├── styles/      # Global styles
       │   ├── utils/       # Helper functions
       │   └── App.jsx      # Main component
       ├── .env.example     # Environment template
       └── vite.config.js   # Build config
-
+```
 
       <h1>🎨 Customization Tips </h1>
 Change Theme: Modify src/styles/theme.js
