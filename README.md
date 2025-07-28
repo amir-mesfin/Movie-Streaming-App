@@ -61,7 +61,8 @@ MovieFlix-Hub/
       ├── .env.example     # Environment template
       └── vite.config.js   # Build config
 
-      🎨 Customization Tips
+
+      <h1>🎨 Customization Tips </h1>
 Change Theme: Modify src/styles/theme.js
 
 Add Features:
@@ -88,27 +89,5 @@ Push to the branch (git push origin feature/AmazingFeature)
 Open a Pull Request
 
 <div align="center" style="margin-top: 40px;"> <p style="font-size: 0.9em; color: #888;"> 📌 Note: You'll need your own TMDb API key for development </p> <h3 style="color: #ff6b6b;">Made with ❤️ by Amir Mesfin</h3> <div style="display: flex; justify-content: center; gap: 10px;"> <a href="#"> <img src="https://img.shields.io/badge/-Portfolio-4ECDC4?style=flat-square&logo=google-chrome&logoColor=white"> </a> <a href="#"> <img src="https://img.shields.io/badge/-LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white"> </a> </div> </div> ```
-Key improvements made:
 
-Added colorful badges and GIF header
-
-Organized features in card layout
-
-Improved visual hierarchy with dividers
-
-Added tech stack badges
-
-Enhanced contribution section
-
-Added social links section
-
-Made the structure more scannable
-
-Added subtle shadows and rounded corners
-
-Improved color scheme consistency
-
-Removed unnecessary duplicate headings
-
-Added visual tips for customization
 
