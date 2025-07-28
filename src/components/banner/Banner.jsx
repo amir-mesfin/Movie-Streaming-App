@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from '../../utils/Axios';
 import requests from '../../utils/requests';
-import style from './Banner.module.css';
+import style from './banner.module.css';
 
 import PlayArrowIcon from '@mui/icons-material/PlayArrow';
 import AddIcon from '@mui/icons-material/Add';
