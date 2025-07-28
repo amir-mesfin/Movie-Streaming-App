@@ -62,17 +62,7 @@ MovieFlix-Hub/
 ```
 
       <h1>🎨 Customization Tips </h1>
-Change Theme: Modify src/styles/theme.js
 
-Add Features:
-
-User authentication
-
-Watchlist functionality
-
-Advanced search filters
-
-API: Replace TMDb with any movie API
 
 💻 Tech Stack
 <div style="display: flex; justify-content: center; gap: 15px; flex-wrap: wrap;"> <img src="https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black" alt="React"> <img src="https://img.shields.io/badge/Vite-B73BFE?style=for-the-badge&logo=vite&logoColor=white" alt="Vite"> <img src="https://img.shields.io/badge/Material_UI-0081CB?style=for-the-badge&logo=mui&logoColor=white" alt="Material UI"> <img src="https://img.shields.io/badge/TMDb_API-01D277?style=for-the-badge&logo=themoviedatabase&logoColor=white" alt="TMDb"> </div>
